@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Messagerie Évaluation</title>
+<link rel="stylesheet" href="style.css"><script src="config.js"></script>
+</head>
+<body>
+<div id="login" class="login-wrap">
+  <div class="login-card">
+    <div class="brand">Messagerie Évaluation</div>
+    <div class="subtitle">Évaluation certificative — espace sécurisé</div>
+    <label>Identifiant</label><input id="u" autocomplete="username">
+    <label>Mot de passe</label><input id="p" type="password" autocomplete="current-password">
+    <button id="connect" class="primary full">Se connecter</button>
+    <div id="loginError" class="error hidden"></div>
+  </div>
+</div>
+<div id="app" class="app hidden">
+  <aside>
+    <div class="aside-brand">Messagerie</div><div id="identity" class="identity"></div>
+    <button id="newBtn" class="compose">+ Nouveau message</button>
+    <button data-view="inbox" class="nav active">Boîte de réception</button>
+    <button data-view="sent" class="nav">Messages envoyés</button>
+    <button data-view="trash" class="nav">Corbeille</button>
+    <button data-view="contacts" class="nav">Contacts</button>
+    <button id="adminBtn" data-view="admin" class="nav hidden">Administration</button>
+    <div class="grow"></div><button id="logout" class="nav">Se déconnecter</button>
+  </aside>
+  <section class="workspace">
+    <header><h1 id="title">Boîte de réception</h1><span id="status">Prêt</span></header>
+    <main id="content"></main>
+  </section>
+</div>
+<script src="app.js"></script>
+</body></html>
